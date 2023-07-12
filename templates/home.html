@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+          }
+        table{
+            width: 100%;
+        }
+
+        #id_mname{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Member Data</h1>
+ 
+    
+
+
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Member id</th>
+                <th>Member Name</th>
+                <th>Member Email</th>
+                <th>Member Mobile Number</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for i in data %}
+                <tr>
+                <td>{{i.mid}}</td>
+                <td>{{i.mname}}</td>
+                <td>{{i.memail}}</td>
+                <td>{{i.mnumber}}</td>
+                {% endfor %}
+                </tr>
+            </tbody>
+          </table>
+
+
+          <h1>Adding Member data in DB</h1>
+<form action="">
+    {{mform.as_p}}
+    <button type="submit">Button</button>
+</form>
+
+    
+</body>
+</html>
